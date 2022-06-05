@@ -15,18 +15,19 @@
           autofocus
           required="required"
         />
-        <select class="select" v-model="this.type">
-          <option v-for="type in types" :key="type">
-            {{ type }}
-          </option>
+        <select class="select" v-model="breed" required>
+          <option value="" hidden selected>Choose breed</option>
+          <option value="cat">CAT</option>
+          <option value="dog">DOG</option>
         </select>
         <button class="button__add">
           <span>ADD</span>
         </button>
       </form>
       <div class="result">
-        <div class="output" v-for="(animal, index) in animals" :key="index">
-          <div>
+        <div class="output" v-for="(animal, index) in animals" :key="animal.id">
+          <div class="output__row">
+            <span class="breed">{{ toUpper(animal.breed) }}</span>
             <span>{{ firstCharUpper(animal.name) }}</span>
           </div>
           <div class="buttonsBox">
@@ -53,6 +54,14 @@
 import { defineComponent } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
 
+type Breed = "cat" | "dog";
+
+type Animal = {
+  id: number;
+  name: string;
+  breed: Breed;
+};
+
 export default defineComponent({
   name: "App",
   // components: {
@@ -60,22 +69,25 @@ export default defineComponent({
   // },
   data: () => ({
     inputValue: "",
-    id: 0,
     filter: "all",
-    type: "",
-    animals: [] as { id: number; name: string; type?: string }[],
-    types: ["Choose type", "Cat", "Dog"],
+    breed: "",
+    animals: [] as Animal[],
   }),
   methods: {
     firstCharUpper(str: string) {
       return str.charAt(0).toUpperCase() + str.slice(1);
     },
+    toUpper(str: string) {
+      return str.toUpperCase();
+    },
     add() {
       this.animals.push({
-        id: (this.id += 1),
+        id: Math.random(),
         name: this.inputValue,
+        breed: this.breed as Breed,
       });
       this.inputValue = "";
+      this.breed = "";
     },
     deleteAnimal(index: number) {
       this.animals.splice(index, 1);

@@ -29,3 +29,15 @@ body {
   align-items: center;
   padding: 100px 0;
 }
+
+.breed {
+  border: none;
+  background-color: orange;
+  padding: 0 5px;
+}
+
+.output__row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
