@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+#app {
+  background-color: #63a1bc;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.section {
+  max-width: 1200px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 100px 0;
+}
