@@ -1,0 +1,96 @@
+.container {
+  background-color: #63a1bc;
+  padding: 30px 60px 50px 60px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.switch__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 5px;
+}
+
+.switch__info {
+  font-family: 'Gochi Hand', cursive;
+  color: white;
+  font-size: 20px;
+}
+
+.title {
+  font-family: 'Cookie', cursive;
+  margin: 0;
+  color: white;
+  font-size: 70px;
+  font-weight: lighter;
+  text-shadow: 2px 2px #5791ab;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.input {
+  font-size: 28px;
+  padding: 0 15px;
+  height: 66px;
+  width: 100%;
+}
+
+.button__add {
+  background-color: #e35886;
+  width: inherit;
+  border: none;
+  cursor: pointer;
+  padding: 20px 30px;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.output {
+  background-color: #e35886;
+  width: 100%;
+  padding: 15px 30px;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button__remove {
+  background-color: transparent;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  color: red;
+  display: flex;
+  justify-content: center;
+}
+
+.select {
+  font-size: 26px;
+  height: 66px;
+}
